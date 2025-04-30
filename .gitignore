@@ -1,0 +1,52 @@
+# 가상환경
+venv/
+env/
+ENV/
+
+# 파이썬 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# 환경 변수
+.env
+.env.*
+
+# 데이터베이스
+*.db
+*.sqlite3
+
+# 로그 파일
+*.log
+logs/
+
+# OS 관련 파일
+.DS_Store
+Thumbs.db
+.directory
+
+# IDE 관련 파일
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 대용량 데이터 파일
+*.pickle
+*.csv
+*.json
+*.xlsx
+*.xls
+cosine_sim.pickle
+movies.pickle
+tmdb_5000_credits.csv
+tmdb_5000_movies.csv
+
+# 빌드 관련 파일
+dist/
+build/
+*.egg-info/ 
