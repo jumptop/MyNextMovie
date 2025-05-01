@@ -87,7 +87,7 @@ def show_movie_details(title):
     details = movie.details(movie_id)
 
     st.write(f"**{details['title']}** ({details['release_date']})")
-    st.image(f"https://image.tmdb.org/t/p/w500{details['poster_path']}", use_column_width=False, width=400)
+    st.image(f"https://image.tmdb.org/t/p/w500{details['poster_path']}", use_container_width=False, width=400)
     st.write(f"**장르:** {', '.join([genre['name'] for genre in details['genres']])}")
     st.write(f"**평점:** {details['vote_average']} (투표 수: {details['vote_count']})")
     st.write(f"**개요:** {details['overview']}")
@@ -174,7 +174,7 @@ if choose == "Main":
         for i in range(0, 2):
             cols = st.columns(5)
             for col in cols:
-                col.image(images[idx], use_column_width=True)
+                col.image(images[idx], use_container_width=True)
                 col.write(titles[idx])
                 idx += 1
 
@@ -249,7 +249,7 @@ elif choose == "Search":
             cols = st.columns(5)
             for col in cols:
                 if idx < len(images):
-                    col.image(images[idx], use_column_width=True)
+                    col.image(images[idx], use_container_width=True)
                     col.write(titles[idx])
                     idx += 1
 
