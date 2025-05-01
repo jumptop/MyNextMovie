@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="600" viewBox="0 0 800 600">
+  <style>
+    .box { fill: #f0f8ff; stroke: #3498db; stroke-width: 2; }
+    .box-highlight { fill: #e8f4f8; stroke: #2980b9; stroke-width: 3; }
+    .arrow { stroke: #2c3e50; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #34495e; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="40" class="title" text-anchor="middle">MyNextMovie 시스템 아키텍처</text>
+  
+  <!-- Frontend -->
+  <rect x="100" y="100" width="200" height="100" rx="10" ry="10" class="box-highlight" />
+  <text x="200" y="150" class="title" text-anchor="middle">사용자 인터페이스</text>
+  <text x="200" y="180" class="text" text-anchor="middle">Streamlit</text>
+  
+  <!-- Backend -->
+  <rect x="400" y="100" width="200" height="100" rx="10" ry="10" class="box" />
+  <text x="500" y="150" class="title" text-anchor="middle">백엔드 서비스</text>
+  <text x="500" y="180" class="text" text-anchor="middle">Python</text>
+  
+  <!-- External Services -->
+  <rect x="700" y="100" width="80" height="100" rx="10" ry="10" class="box" />
+  <text x="740" y="150" class="title" text-anchor="middle" font-size="16px">외부</text>
+  <text x="740" y="170" class="text" text-anchor="middle">API</text>
+  
+  <!-- Movie Recommendation System -->
+  <rect x="150" y="300" width="160" height="80" rx="10" ry="10" class="box" />
+  <text x="230" y="340" class="text" text-anchor="middle">영화 추천 시스템</text>
+  
+  <!-- Review System -->
+  <rect x="420" y="300" width="160" height="80" rx="10" ry="10" class="box" />
+  <text x="500" y="340" class="text" text-anchor="middle">리뷰 관리 시스템</text>
+  <text x="500" y="360" class="text" text-anchor="middle">SQLite</text>
+  
+  <!-- TMDb API -->
+  <rect x="690" y="300" width="100" height="80" rx="10" ry="10" class="box" />
+  <text x="740" y="340" class="text" text-anchor="middle">TMDb API</text>
+  
+  <!-- Data Flow -->
+  <rect x="100" y="450" width="680" height="130" rx="10" ry="10" fill="#f9f9f9" stroke="#bdc3c7" stroke-width="1" />
+  <text x="140" y="480" class="title" font-size="16px">데이터 흐름</text>
+  
+  <text x="140" y="510" class="text">1. 사용자가 영화 선택</text>
+  <text x="280" y="510" class="text">2. 코사인 유사도 계산</text>
+  <text x="460" y="510" class="text">3. TMDb API 정보 획득</text>
+  <text x="140" y="540" class="text">4. 추천 결과 표시 및 시각화</text>
+  <text x="380" y="540" class="text">5. 사용자 리뷰 저장</text>
+  
+  <!-- Connection Lines -->
+  <line x1="300" y1="150" x2="400" y2="150" class="arrow" />
+  <line x1="600" y1="150" x2="700" y2="150" class="arrow" />
+  
+  <line x1="200" y1="200" x2="200" y2="300" class="arrow" />
+  <line x1="500" y1="200" x2="500" y2="300" class="arrow" />
+  <line x1="740" y1="200" x2="740" y2="300" class="arrow" />
+  
+  <line x1="600" y1="150" x2="690" y2="150" class="arrow" />
+  <line x1="400" y1="150" x2="300" y2="150" class="arrow" />
+</svg> 

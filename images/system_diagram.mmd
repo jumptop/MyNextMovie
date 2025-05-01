@@ -1,0 +1,14 @@
+graph TD
+    A[사용자 인터페이스<br/>Streamlit] <--> B[백엔드 서비스<br/>Python]
+    B <--> C[외부 API 및<br/>데이터베이스]
+    
+    A --> D[영화 추천 시스템]
+    B --> E[리뷰 관리 시스템<br/>SQLite]
+    C --> F[TMDb API]
+    
+    subgraph 데이터 흐름
+    G[1. 사용자가 영화 선택] --> H[2. 코사인 유사도 계산]
+    H --> I[3. TMDb API 정보 획득]
+    I --> J[4. 추천 결과 표시 및 시각화]
+    J --> K[5. 사용자 리뷰 저장]
+    end 

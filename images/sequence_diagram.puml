@@ -1,0 +1,23 @@
+@startuml
+actor User
+participant "Streamlit UI" as UI
+participant "Backend Services" as BS
+participant "TMDb API" as API
+database "SQLite DB" as DB
+
+User -> UI: 영화 선택
+UI -> BS: 영화 ID 전달
+BS -> BS: 코사인 유사도 계산
+BS -> API: 영화 정보 요청
+API --> BS: 영화 정보 응답
+BS --> UI: 추천 결과 반환
+UI --> User: 영화 추천 결과 표시
+
+User -> UI: 리뷰 작성
+UI -> BS: 리뷰 데이터 전달
+BS -> DB: 리뷰 저장
+DB --> BS: 저장 성공
+BS --> UI: 리뷰 등록 완료
+UI --> User: 리뷰 추가 확인
+
+@enduml 
